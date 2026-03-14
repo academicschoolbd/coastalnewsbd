@@ -1,1 +1,269 @@
-Coming Soon
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>কোস্টাল নিউজ বিডি | শীঘ্রই আসছে...</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --primary-dark: #0a58ca;
+      --text: #1a1f36;
+      --light: #f8f9fa;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans Bengali', 'Hind Siliguri', system-ui, sans-serif;
+      background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 920px;
+      width: 100%;
+    }
+
+    .logo-area {
+      margin-bottom: 2.5rem;
+    }
+
+    .logo {
+      font-size: clamp(2.8rem, 9vw, 6.8rem);
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -1px;
+      line-height: 0.92;
+    }
+
+    .tagline {
+      font-size: clamp(1.25rem, 4.5vw, 2.1rem);
+      font-weight: 500;
+      color: #334155;
+      margin: 0.8rem 0 2.5rem;
+      line-height: 1.4;
+    }
+
+    .coming-soon {
+      font-size: clamp(2.1rem, 6.8vw, 4.6rem);
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 1.8rem;
+      animation: pulse 4s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%,100% { opacity: 0.92; transform: scale(1); }
+      50%     { opacity: 1;    transform: scale(1.03); }
+    }
+
+    .progress-container {
+      max-width: 580px;
+      margin: 2.5rem auto 3rem;
+      background: rgba(255,255,255,0.6);
+      border-radius: 50px;
+      height: 18px;
+      overflow: hidden;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #60a5fa);
+      border-radius: 50px;
+      transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-bar::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      animation: shine 2.5s infinite;
+    }
+
+    @keyframes shine {
+      0%   { transform: translateX(-100%); }
+      60%  { transform: translateX(100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: clamp(12px, 4vw, 28px);
+      flex-wrap: wrap;
+      margin: 2.5rem 0 3rem;
+    }
+
+    .count-box {
+      background: white;
+      border-radius: 16px;
+      padding: clamp(14px, 3vw, 24px) clamp(18px, 4vw, 32px);
+      min-width: 80px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .count-box:hover {
+      transform: translateY(-8px);
+    }
+
+    .number {
+      font-size: clamp(1.8rem, 6vw, 3.4rem);
+      font-weight: 700;
+      color: var(--primary-dark);
+      line-height: 1;
+    }
+
+    .label {
+      font-size: clamp(0.9rem, 2.8vw, 1.15rem);
+      color: #64748b;
+      margin-top: 6px;
+    }
+
+    .social {
+      margin: 2.5rem 0;
+    }
+
+    .social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      margin: 0 10px;
+      border-radius: 50%;
+      background: white;
+      color: #475569;
+      font-size: 1.4rem;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
+    }
+
+    .social a:hover {
+      color: var(--primary);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(59,130,246,0.25);
+    }
+
+    footer {
+      padding: 2rem 1rem;
+      text-align: center;
+      color: #64748b;
+      font-size: 0.95rem;
+      border-top: 1px solid rgba(226,232,240,0.6);
+    }
+
+    @media (max-width: 480px) {
+      .countdown { gap: 16px; }
+      .count-box { min-width: 70px; padding: 12px 16px; }
+      .social a { width: 42px; height: 42px; font-size: 1.2rem; margin: 0 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <div class="container">
+    <div class="logo-area">
+      <div class="logo">কোস্টাল নিউজ</div>
+      <div class="tagline">চট্টগ্রাম ও উপকূলের সবচেয়ে নির্ভরযোগ্য নিউজ পোর্টাল</div>
+    </div>
+
+    <h1 class="coming-soon">শীঘ্রই আসছে...</h1>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progress"></div>
+    </div>
+
+    <div class="countdown" id="countdown">
+      <div class="count-box"><div class="number" id="days">00</div><div class="label">দিন</div></div>
+      <div class="count-box"><div class="number" id="hours">00</div><div class="label">ঘণ্টা</div></div>
+      <div class="count-box"><div class="number" id="minutes">00</div><div class="label">মিনিট</div></div>
+      <div class="count-box"><div class="number" id="seconds">00</div><div class="label">সেকেন্ড</div></div>
+    </div>
+
+    <div class="social">
+      <a href="https://facebook.com/coastalnewsbd" target="_blank" aria-label="Facebook">FB</a>
+      <a href="#" target="_blank" aria-label="YouTube">YT</a>
+      <a href="#" target="_blank" aria-label="Instagram">IG</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  © ২০২৫–২০২৬ কোস্টাল নিউজ বিডি • সকল অধিকার সংরক্ষিত
+</footer>
+
+<script>
+  // Fake progress bar animation (you can connect real percentage later)
+  let progress = 0;
+  const bar = document.getElementById('progress');
+
+  const fakeProgress = setInterval(() => {
+    progress += Math.random() * 1.8;
+    if (progress >= 92) {
+      progress = 92;
+      clearInterval(fakeProgress);
+    }
+    bar.style.width = progress + '%';
+  }, 220);
+
+
+  // Countdown (change targetDate to your real launch date)
+  const targetDate = new Date("2025-06-15T10:00:00+06:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance < 0) {
+      document.getElementById("countdown").innerHTML = "<h2 style='font-size:2.2rem;color:#10b981;'>ওয়েবসাইট চালু হয়েছে!</h2>";
+      return;
+    }
+
+    const days    = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours   = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent    = days.toString().padStart(2,'0');
+    document.getElementById("hours").textContent   = hours.toString().padStart(2,'0');
+    document.getElementById("minutes").textContent = minutes.toString().padStart(2,'0');
+    document.getElementById("seconds").textContent = seconds.toString().padStart(2,'0');
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
